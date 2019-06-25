@@ -1,0 +1,38 @@
+{
+  "name": "study-typescript-node",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "node -r ts-node/register node_modules/.bin/micro-dev ./src/server.ts",
+    "dev:ts": "ts-node src/server.ts",
+    "dev:watch": "ts-node-dev --respawn src/server.ts",
+    "clean": "rimraf dist/*",
+    "tsc": "tsc",
+    "build": "npm-run-all clean tsc",
+    "start": "micro ./dist/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-micro": "^2.6.4",
+    "graphql": "^14.3.1",
+    "graphql-import": "^0.7.1",
+    "graphql-tools": "^4.0.5",
+    "micro": "^9.3.4",
+    "microrouter": "^3.1.3",
+    "typescript": "^3.5.2"
+  },
+  "devDependencies": {
+    "@types/graphql": "^14.2.2",
+    "@types/micro": "^7.3.3",
+    "@types/microrouter": "^3.1.0",
+    "@types/node": "^12.0.10",
+    "micro-dev": "^3.0.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^2.6.3",
+    "ts-node": "^8.3.0",
+    "ts-node-dev": "^1.0.0-pre.40"
+  }
+}
